@@ -1,40 +1,45 @@
-# 🛠️ BP Code Sandbox & Utilities
+# 🎓 Basics of Programming (BP) - Foundational Concepts in C
 
-Welcome to my repository for **Basics of Programming (BP)** code snippets, utility scripts, and foundational algorithms. This repository serves as a personal sandbox and a modular toolkit, showcasing clean coding practices, basic data structures, and structured programming paradigms in pure C.
-
----
-
-## 🚀 Key Technical Focus Areas (Resume Highlights)
-
-* **Modular System Design:** Demonstrates proper decoupling of code using custom header guards (`#ifndef`, `#define`) and dedicated implementation files to build reusable components.
-* **Console I/O & UI Management:** Includes cross-platform and Windows-specific utilities (like cursor manipulation via `COORD` and terminal state routing) to handle raw console behaviors.
-* **File I/O & Persistent Storage:** Contains practical examples of managing external data streams (such as writing, reading, and parsing structured plain-text configurations).
-* **Data Modeling:** Features implementations of fundamental abstract types, unified coordinate systems (`struct Position`), and localized multi-matrix lookups.
+This repository serves as a comprehensive academic portfolio showcasing core programming paradigms and computer science building blocks implemented in pure C. The codebase directly demonstrates the practical application of fundamental concepts taught in the **Basics of Programming (BP)** curriculum.
 
 ---
 
-## 📁 Repository Structure & Components
+## 🚀 Covered BP Concepts & Programming Pillars
 
-The repository is organized by functional modules to keep the codebase clean and discoverable:
+### 1. Control Flow & Conditional Logic
+* **Decision Making:** Comprehensive use of `if`, `else if`, and `else` blocks to handle complex runtime branching and game state decisions.
+* **Logical Expressions:** Combining relational and logical operators (`&&`, `||`, `!`) to design robust validation systems (e.g., checking boundary limits and non-overlapping coordinates).
 
-### 🔑 1. Session & Auth Modules (`menu.c` / `menu.h`)
-* Focuses on menu-driven console applications and basic state-machine routing (`PAGE_LOGIN`, `PAGE_SELECTMAP`, etc.).
-* Implements sequential file lookup parsing (`fscanf`) to validate strings and credentials from external text assets like `users.txt`.
+### 2. User-Defined Data Types & Structures (`struct`)
+* **Data Abstraction:** Implementing structures (`struct`) like `struct Position` to bind related variables into a single logical entity, forming the backbone of entity tracking.
+* **Data Modeling:** Using nested components and structural records to cleanly pass complex game data between modules without relying heavily on unorganized global scalars.
 
-### 📐 2. Core Coordinates & Shared Logic (`common.h`)
-* Defines highly abstracted data types such as `struct Position { int x; int y; }` used across different grid rendering programs.
-* Serves as a centralized dependency to prevent type redefinition and structural bloat.
+### 3. Recursive Patterns & Algorithmic Thinking
+* **Recursion:** Design and implementation of self-referential functions that solve complex calculations by dividing them into base cases and recursive steps.
+* **Mathematical Scaling:** Utilizing deterministic formulas and structural algorithms to compute logical progression curves (e.g., dynamic scaling functions).
 
-### 🎨 3. Terminal & Grid Utilities (`map.h` / Custom Scripts)
-* Contains experimental setups for transitioning standard console buffers into internal Unicode modes (`_O_U16TEXT`) for specialized character drawing.
+### 4. Advanced Data Structures & Memory Concepts
+* **Dynamic Chaining (Linked Lists / Node Tracking):** Theoretical and practical layouts of sequentially linked nodes to track real-time dynamic body segments (such as positional tracking buffers).
+* **Grid Representations (2D Arrays):** Mastering lookups, coordinate mapping, and boundary detection via fixed and dynamic matrix allocations (`map[HEIGHT][WIDTH]`).
+
+### 5. Modular File Management & Scoping
+* **Translation Units:** Separating monolithic logic into distinct modules via `.c` implementations and `.h` interface layers.
+* **Header Guards:** Using preprocessor directives (`#ifndef`, `#define`, `#endif`) to secure safe compilation trees across interconnected files.
 
 ---
 
-## 🔨 Requirements & Compilation
+## 📁 Repository Organization
 
-These snippets are primarily targeted for Windows environments due to low-level hardware abstractions (`<windows.h>`, `<conio.h>`, and `<io.h>`) used for keyboard hit detection and console styling.
+The repository isolates individual academic concepts into clean files:
+* **`common.h`**: Structures, type definitions, and central configuration guards.
+* **`menu.c` / `menu.h`**: Practical applications of control flow, loops, and conditional file parsing.
+* **Algorithmic Utilities**: Isolated scripts demonstrating recursive patterns, sequential parsing, and structural data arrangements.
 
-### Standard Compilation Example
-To compile any isolated module along with its main runner, open your terminal and run:
+---
+
+## 🔨 How to Compile
+
+These scripts can be compiled using any standard C compiler (e.g., GCC). 
+
 ```bash
-gcc main.c menu.c -o utility_output.exe
+gcc main.c menu.c -o bp_concepts.exe
